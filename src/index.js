@@ -10,6 +10,7 @@ var GAME_STATES = {
 
 var numbers = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
 
+//multilanguage support
 var languageString = {
     "en-GB": {
         "translation": {
@@ -95,8 +96,9 @@ var languageString = {
 };
 
 var Alexa = require("alexa-sdk");
-var APP_ID = undefined;  // TODO replace with your app ID (OPTIONAL).
+var APP_ID = undefined;
 
+//entry point for handlers
 exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
     alexa.appId = APP_ID;
@@ -106,6 +108,7 @@ exports.handler = function(event, context, callback) {
     alexa.execute();
 };
 
+//basic handlers
 var newSessionHandlers = {
     "LaunchRequest": function () {
         this.handler.state = GAME_STATES.START;
@@ -125,13 +128,15 @@ var newSessionHandlers = {
     }
 };
 
+//start handler for starting the skill
 var startStateHandlers = Alexa.CreateStateHandler(GAME_STATES.START, {
     "StartGame": function (newGame) {
         var speechOutput = newGame ? this.t("NEW_GAME_MESSAGE", this.t("GAME_NAME")) + this.t("WELCOME_MESSAGE", GAME_LENGTH.toString()) : "";
-        // Select GAME_LENGTH questions for the game
+        
+        //generate memory list
         var officeSupplies = generateOfficeSuppliesOrdering();
-        // Select and shuffle the answers for each question
-
+        
+        // build up text for alexa
         var currentSupplyIndex = 0;
         var spokenOfficeSupply = officeSupplies[currentSupplyIndex];
         var repromptText = this.t("TELL_QUESTION_MESSAGE", "1", spokenOfficeSupply);
@@ -152,6 +157,7 @@ var startStateHandlers = Alexa.CreateStateHandler(GAME_STATES.START, {
     }
 });
 
+//proxy for handlers
 var triviaStateHandlers = Alexa.CreateStateHandler(GAME_STATES.TRIVIA, {
     "SupplyIntent": function () {
         handleUserGuess.call(this, false);
@@ -184,6 +190,7 @@ var triviaStateHandlers = Alexa.CreateStateHandler(GAME_STATES.TRIVIA, {
     }
 });
 
+//handlers for help
 var helpStateHandlers = Alexa.CreateStateHandler(GAME_STATES.HELP, {
     "helpTheUser": function (newGame) {
         var askMessage = newGame ? this.t("ASK_MESSAGE_START") : this.t("REPEAT_QUESTION_MESSAGE") + this.t("STOP_MESSAGE");
@@ -233,6 +240,7 @@ var helpStateHandlers = Alexa.CreateStateHandler(GAME_STATES.HELP, {
     }
 });
 
+//handler for answers
 function handleUserGuess(userGaveUp) {
 
     var speechOutput = "";
@@ -317,6 +325,7 @@ function handleUserGuess(userGaveUp) {
     }
 }
 
+//gerate the list for memory game
 function generateOfficeSuppliesOrdering() {
     var officeSupplies = [];
     var indexList = [
