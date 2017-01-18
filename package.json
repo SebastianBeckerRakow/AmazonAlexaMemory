@@ -1,7 +1,7 @@
 {
-  "name": "soccer club memory",
+  "name": "soccer team memory",
   "version": "1.0.0",
-  "description": "A simple memory game with german bundesliga clubs.",
+  "description": "A simple memory game with german bundesliga teams.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
