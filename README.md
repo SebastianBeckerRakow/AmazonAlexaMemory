@@ -13,11 +13,11 @@ login to https://developer.amazon.com/ and add a new alexa skill
 The skill type needs to be a Custom Interaction Model.
 The language depends on in which country you want to publish your skill.
 The name of the skill is just the display name, more important is the invocation name.
-The invocation name is the name the user actually says to alexa. So it sould not be to complicated.
+The invocation name is the name the user actually says to alexa. So it should not be to complicated.
 
 On the next card you have to add the intent schema, custom slot types and the sample utterances.
 Just take the files from this project as an example.
-The intent schema is the connection to the handlers that will be later on definced in the lambda function.
+The intent schema is the connection to the handlers that will be later on defined in the lambda function.
 Here you define the inputs that the users can say for communicating with your skill.
 There are predefined amazon data types available like numbers.
 But you can also define your own data types. This you can do by using custom slot types.
@@ -39,7 +39,7 @@ There you select AWS Lambda as a service endpoint, select the region where you c
 
 Now you can switch to the Test card and check if your skill is working.
 If everything is saved, the skill is already available for your developer account.
-You can test it with a virtual echo on echosim.io.
+You can test it with a virtual echo on http://echosim.io.
 Create a new device with your developer account and test your skill.
 If your tests are ok, you can submit your skill for certification.
 
