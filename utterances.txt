@@ -1,0 +1,8 @@
+AMAZON.StartOverIntent start the game
+AMAZON.StartOverIntent start
+AMAZON.StartOverIntent for a new game
+AMAZON.StartOverIntent with a new game
+AMAZON.StartOverIntent lets play a new game
+
+SupplyIntent {Supply}
+SupplyIntent {Supply} is my answer
