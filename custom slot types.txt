@@ -1,27 +1,20 @@
-Supplies
+Teams
 
-stapler
-staple
-binder clip
-paper clip
-scissor
-ruler
-index card
-staple remover
-paper trimmer
-clipboard
-pen
-notebook
-copy paper
-ink cartridge
-toner cartridge
-diary
-journal
-calender
-marker
-eraser
-binder
-file folder
-file storage
-report covers
-accordion folder
+FC Augsburg
+Hertha BSC
+Werder Bremen
+SV Darmstadt 98
+Borussia Dortmund
+Eintracht Frankfurt
+SC Freiburg
+Hamburger SV
+TSG 1899 Hoffenheim
+FC Ingolstadt 04
+1. FC Köln
+RB Leipzig
+Bayer Leverkusen
+FSV Mainz 05
+Borussia Mönchengladbach
+FC Bayern München
+FC Schalke 04
+VfL Wolfsburg

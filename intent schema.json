@@ -1,11 +1,11 @@
 {
   "intents": [
     {
-      "intent": "SupplyIntent",
+      "intent": "TeamIntent",
       "slots": [
         {
-          "name": "Supply",
-          "type": "Supplies"
+          "name": "Team",
+          "type": "Teams"
         }
       ]
     },

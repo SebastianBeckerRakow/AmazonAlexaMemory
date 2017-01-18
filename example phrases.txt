@@ -1,8 +1,3 @@
-Alexa, start office supplies memory.
-Alexa, open office supplies memory and lets play a new game.
-Alexa, ask office supplies memory for a new game.
-
-
-Alexa will give you different office supplies and you have to memorize them in the right order. So you get to know your daily used office supplies.
-
-Memorize your daily used office supplies.
+Alexa, start soccer team memory.
+Alexa, open soccer team memory and lets play a new game.
+Alexa, ask soccer team memory for a new game.
